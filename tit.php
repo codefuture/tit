@@ -104,14 +104,13 @@
 			body{font-family: sans-serif; font-size: 11px; background-color: #f5f5f5;}
 			a, a:visited{color:#004989; text-decoration:none;}
 			a:hover{color: #333;}
-			#container{border-radius: 2px;box-shadow: 0 2px 4px rgba(0,0,0,0.4);width: 300px; margin: 0 auto; padding: 20px; background-color: #fff;}
+			#container{border-radius: 2px;box-shadow: 0 2px 4px rgba(0,0,0,0.4);width: 300px; margin: 0 auto; padding: 10px; background-color: #fff;}
 			#menu{border-radius: 2px;background:#5C6E83;padding: 2px 10px;text-align: right;}
 			#menu h1{color: #FFF;margin: 0;text-align: left;}
 			#footer{padding: 10px 0 0;text-align: center;text-shadow: 1px 1px 0 #DDD;}
-			label{ display: block; font-weight: bold;color: #999999;}
-			select,input{border-radius:2px;background:#fff;border: 1px solid #ddd;color: #888;font-size: 16px;margin: 0 0 15px;padding: 2px;width: 240px;}
+			select,input{border-radius:2px;background:#fff;border: 1px solid #ddd;color: #888;font-size: 16px;margin: 0 0 15px;padding: 5px;width: 240px;}
 			form{display: block;margin: 20px auto;width: 250px;}
-			.button{background:#A5B9CF;border: medium none;color: #333;font-size: 15px;margin: 0;text-transform: uppercase;width: 90px;}
+			.button{background:#A5B9CF;border:none;color: #333;font-size: 15px;margin: 0;text-transform: uppercase;text-shadow: rgba(255,255,255,0.4) 0 1px 0;}
 			.button:hover{background: #3C454F;color: #eee;}
 			span.error{color: red;display: block;font-size: 16px;margin: 5px 0 10px;text-align: center;}
 		</style>
@@ -123,9 +122,9 @@
 			</div>
 			<?php echo $message;?>
 			<form method="POST">
-				<label>Username</label><input type="text" name="u" />
-				<label>Password</label><input type="password" name="p" />
-				<label></label><input class="button" type="submit" name="login" value="Login" />
+				<input type="text" name="u" placeholder="Username" autocomplete="off"/>
+				<input type="password" name="p" placeholder="Password" autocomplete="off" />
+				<input class="button" type="submit" name="login" value="Login" />
 			</form>
 		</div>
 		<div id="footer">
@@ -535,18 +534,18 @@ function unwatch($id){
 		th,td{border: 1px solid #fff;}
 		td .button{display: inline-block;margin: 1px 0 0;width: 40px;}
 		.center{text-align:center;}
-		#menu{border-radius: 2px;background:#5C6E83;height: 35px;padding: 0px 10px;}
-		#menu h1{color: #FFF;display: inline-block;margin: 0;}
-		#menu .links{float: right;position: relative;top: 0px;}
+		#menu{height: 35px;padding: 0px 0px;}
+		#menu h1{color: #666;display: inline-block;margin: 0;}
+		#menu .links{border-radius: 2px;background:#5C6E83;float: right;position: relative;top: 0px;padding: 0px 5px}
 		#menu a,#menu a:visited{border-left: 1px solid #FFF;color: #C9CED3;display: inline-block;height: 21px;padding: 7px;}
 		#menu a:hover,#menu a.current{background:#C9CED3;color:#5C6E83;text-decoration:none;}
-		#container{border-radius: 2px;box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);width: 900px; margin: 0 auto; padding: 20px; background: #fff;}
-		h2 a.edit{float: right;padding: 3px 12px 2px;text-decoration: none;font-weight: normal;}
+		#container{border-radius: 2px;box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);width: 1000px; margin: 0 auto; padding: 10px; background: #fff;}
+		h2 a.edit{float: right;padding: 5px 10px;text-decoration: none;}
 		h2 .priority{color: #666;float: none;font-style: normal;}
 		h2 span{color: #CCC;float: right;font-style: italic;}
-		span.key{color: #666;font-size: 10px;font-style: normal;}
+		span.key{color: #666;font-size: 12px;font-style: normal;padding-top: 5px;}
 		.key .keybox{border-radius: 2px;color: #FFF;display: inline;margin-right: 1px;padding: 3px 5px;text-align: center;}
-		#footer{padding: 10px 0 0;text-align: center;text-shadow: 1px 1px 0 #DDD;}
+		#footer{padding: 10px 0 0;text-align: center;text-shadow: 1px 1px 0 #DDD;font-size: 11px;}
 		select,input,textarea,#comments,.comment,#create,.issue,.issue h2,.attachments_wrapper,.button{border-radius:2px; background-color: #f2f2f2;}
 		#create{margin: 10px 0;padding: 15px;}
 		.attachments_wrapper{background: #FFF;color: #CCC;padding: 5px;}
@@ -557,18 +556,21 @@ function unwatch($id){
 		textarea{width: 850px;}
 		.comment{background: #FFF;margin: 10px 0;padding: 5px 10px 10px;}
 		.comment-meta{color: #666;}
-		.p1{background: red;}
-		.p2{background: #FF7E00;}
-		.p3{background: #06C802;}
+		.p1{background: red;color: #FFF;}
+		.p2{background: #FF7E00;color: #FFF;}
+		.p3{background: #06C802;color: #FFF;}
+		span.c1{color: red;}
+		span.c2{color: #FF7E00;}
+		span.c3{color: #06C802;}
 		.hide{display:none;}
 		.left{float: left;}
 		.right{float: right;}
 		.clear{clear:both;}
 		.button:visited,
-		.button{background: #A5B9CF;border: none;color: #3C454F;font-size: 12px;margin: 0;padding: 2px 5px;text-shadow: rgba(255,255,255,0.4) 0 1px 0;}
+		.button{background: #A5B9CF;border: none;color: #3C454F;font-size: 12px;margin: 0;padding: 5px;text-shadow: rgba(255,255,255,0.4) 0 1px 0;}
 		.button:hover{background: #3C454F;color: #eee;text-decoration:none;text-shadow: rgba(0,0,0,0.4) 0 1px 0;}
 		.button:active {background: #A5B9CF;border: none;color: #3C454F;text-decoration:none;}
-		a.green:visited,a.green,a.red:visited,a.red{font-weight: 600;text-shadow: 0 0 1px rgba(0, 0, 0, 0.4);}
+		a.green:visited,a.green,a.red:visited,a.red{font-weight: 600;padding: 2px 5px;text-shadow: 0 0 1px rgba(0, 0, 0, 0.4);}
 		a.green:visited,a.green{background: #B0DA14;color: #FFF}
 		a.red:visited,a.red{background: #D62929;color: #FFF}
 		a.red:hover,
@@ -589,7 +591,7 @@ function unwatch($id){
 
 	<?php if($mode!="list"):?>
 	<?php if(isset($issue['id']) && ($_SESSION['l']<=1 || $_SESSION['u']==$issue['user'])){?>
-	<h2><span class="priority">Priority:<?php echo $priorityArr[$issue['priority']];?></span> <a href="#" onclick="document.getElementById('create').className='';document.getElementById('title').focus();" class="edit button">Edit Issue <?php echo $issue['id'];?></a></h2>
+	<h2><span class="priority<?php echo ($issue['priority']==1?" c1":($issue['priority']==2?" c2":" c3"));?>">Priority:<?php echo $priorityArr[$issue['priority']];?></span> <a href="#" onclick="document.getElementById('create').className='';document.getElementById('title').focus();" class="edit button green">Edit Issue <?php echo $issue['id'];?></a></h2>
 	<?}?>
 	<div id="create" class='<?php echo isset($_GET['editissue']) || $mode=="new"?'':'hide'; ?>'>
 		<?if($mode!="new"){?>
